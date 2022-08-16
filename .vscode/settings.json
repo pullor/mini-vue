@@ -1,3 +1,4 @@
 {
-    "jest.debugMode": true
+    "jest.debugMode": true,
+    "editor.formatOnSave": true
 }
