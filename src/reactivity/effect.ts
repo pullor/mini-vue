@@ -1,5 +1,10 @@
+import { extend } from '../shared'
+
 class ReactvieEffect {
   private _fn
+  deps = []
+  private active = true
+  onStop?: () => void
   public scheduler: Function | undefined
   constructor(fn, scheduler) {
     this._fn = fn
@@ -9,7 +14,21 @@ class ReactvieEffect {
     activeEffect = this
     return this._fn()
   }
+  stop() {
+    if (this.active) {
+      cleanupEffect(this)
+      this.onStop && this.onStop()
+      this.active = false
+    }
+  }
 }
+
+function cleanupEffect(effect) {
+  effect.deps.forEach((dep: any) => {
+    dep.delete(effect)
+  })
+}
+
 const targetMap = new Map()
 export function track(target, key) {
   let depsMap = targetMap.get(target)
@@ -22,8 +41,10 @@ export function track(target, key) {
     dep = new Set()
     depsMap.set(key, dep)
   }
+  if (!activeEffect) return
 
   dep.add(activeEffect)
+  activeEffect.deps.push(dep)
 }
 
 export function trigger(target, key) {
@@ -38,16 +59,22 @@ export function trigger(target, key) {
   }
 }
 
+export function stop(runner) {
+  runner.effect.stop()
+}
+
 type EffectOptions = {
   scheduler?: Function
+  onStop?: Function
 }
 
 let activeEffect
 export function effect(fn, options?: EffectOptions) {
   const _effect = new ReactvieEffect(fn, options?.scheduler)
   _effect.run()
+  extend(_effect, options)
 
-  const runner = _effect.run.bind(_effect)
-
+  const runner: any = _effect.run.bind(_effect)
+  runner.effect = _effect
   return runner
 }
