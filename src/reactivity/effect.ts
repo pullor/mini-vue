@@ -5,7 +5,7 @@ class ReactvieEffect {
   }
   run() {
     activeEffect = this
-    this._fn()
+    return this._fn()
   }
 }
 const targetMap = new Map();
@@ -36,4 +36,8 @@ let activeEffect
 export function effect(fn) {
     const _effect = new ReactvieEffect(fn)
     _effect.run()
+
+    const runner = _effect.run.bind(_effect);
+
+    return runner
 }
