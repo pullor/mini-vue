@@ -7,6 +7,8 @@ class RefImpl {
   private _value
   _rowValue
   dep
+  public __v_isRef = true
+
   constructor(value) {
     this._rowValue = value
     this._value = convert(value)
@@ -36,4 +38,12 @@ function convert(value) {
 
 export function ref(value) {
   return new RefImpl(value)
+}
+
+export function isRef(ref) {
+  return !!ref.__v_isRef
+}
+
+export function unRef(ref) {
+  return isRef(ref) ? ref.value : ref
 }
