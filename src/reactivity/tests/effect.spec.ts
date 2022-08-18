@@ -28,8 +28,6 @@ describe('effect', () => {
       return foo
     })
 
-    console.log(runner)
-
     expect(foo).toBe(1)
     runner()
     expect(foo).toBe(2)
