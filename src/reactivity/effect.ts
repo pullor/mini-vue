@@ -2,7 +2,7 @@ import { extend } from '../shared'
 let activeEffect
 let shouldTrack = false
 
-class ReactvieEffect {
+export class ReactiveEffect {
   private _fn
   deps = []
   private active = true
@@ -96,7 +96,7 @@ type EffectOptions = {
 }
 
 export function effect(fn, options?: EffectOptions) {
-  const _effect = new ReactvieEffect(fn, options?.scheduler)
+  const _effect = new ReactiveEffect(fn, options?.scheduler)
   _effect.run()
   extend(_effect, options)
 
