@@ -905,9 +905,9 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/preset-typescript@^7.18.6":
+"@babel/preset-typescript@^7.15.0":
   version "7.18.6"
-  resolved "https://registry.npmmirror.com/@babel/preset-typescript/-/preset-typescript-7.18.6.tgz#ce64be3e63eddc44240c6358daefac17b3186399"
+  resolved "https://repo.huaweicloud.com/repository/npm/@babel/preset-typescript/-/preset-typescript-7.18.6.tgz#ce64be3e63eddc44240c6358daefac17b3186399"
   integrity sha512-s9ik86kXBAnD760aybBucdpnLsAt0jK1xqJn2juOn9lkOvSHV60os5hxoVJsPzMQxvnUJFAlkont2DvvaYEBtQ==
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.6"
@@ -1241,7 +1241,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@rollup/plugin-typescript@^8.3.4":
+"@rollup/plugin-typescript@^8.2.5":
   version "8.3.4"
   resolved "https://repo.huaweicloud.com/repository/npm/@rollup/plugin-typescript/-/plugin-typescript-8.3.4.tgz#45cdc0787b658b37d0362c705d8de86bc8bc040e"
   integrity sha512-wt7JnYE9antX6BOXtsxGoeVSu4dZfw0dU3xykfOQ4hC3EddxRbVG/K0xiY1Wup7QOHJcjLYXWAn0Kx9Z1SBHHg==
@@ -1837,7 +1837,7 @@ fs.realpath@^1.0.0:
   resolved "https://registry.npmmirror.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
 
-fsevents@^2.3.2:
+fsevents@^2.3.2, fsevents@~2.3.2:
   version "2.3.2"
   resolved "https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
@@ -2754,10 +2754,12 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-roolup@^1.0.4:
-  version "1.0.4"
-  resolved "https://repo.huaweicloud.com/repository/npm/roolup/-/roolup-1.0.4.tgz#e4af7f98cd19a7bc261c42ddeb75d493501d48b5"
-  integrity sha512-22uPf/Ga3NHxEWtyisY56g5hP/U8WAVORY8EKsvHeQYq0gYxKXzR+CG3G2+qR2fj2VsWhnHwPRiPcIbbirFDlA==
+rollup@^2.78.0:
+  version "2.78.0"
+  resolved "https://repo.huaweicloud.com/repository/npm/rollup/-/rollup-2.78.0.tgz#00995deae70c0f712ea79ad904d5f6b033209d9e"
+  integrity sha512-4+YfbQC9QEVvKTanHhIAFVUFSRsezvQF8vFOJwtGfb9Bb+r014S+qryr9PSmw8x6sMnPkmFBGAvIFVQxvJxjtg==
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 safe-buffer@~5.1.1:
   version "5.1.2"
@@ -2939,6 +2941,11 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+tslib@^2.3.1:
+  version "2.4.0"
+  resolved "https://repo.huaweicloud.com/repository/npm/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
+  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 type-detect@4.0.8:
   version "4.0.8"

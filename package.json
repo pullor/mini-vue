@@ -10,12 +10,13 @@
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
-    "@babel/preset-typescript": "^7.18.6",
-    "@rollup/plugin-typescript": "^8.3.4",
+    "@babel/preset-typescript": "^7.15.0",
+    "@rollup/plugin-typescript": "^8.2.5",
     "@types/jest": "^28.1.6",
     "babel-jest": "^28.1.3",
     "jest": "^28.1.3",
-    "roolup": "^1.0.4",
+    "rollup": "^2.78.0",
+    "tslib": "^2.3.1",
     "typescript": "^4.7.4"
   }
 }
